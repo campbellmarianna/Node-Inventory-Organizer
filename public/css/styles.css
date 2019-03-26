@@ -24,6 +24,8 @@ body {
 Home
 ********************************************************/
 .wrapper {
+    padding-right: 12px;
+    padding-left: 12px;
     color: #444444;
     display: flex;
     text-align: center;
@@ -96,7 +98,7 @@ div.form-group {
 
 div.form-style h1 {
     margin-top: -20px;
-    color: #4B9BD5;
+    color: #A569F8;
     font-weight: 500;
     font-size: 50px;
     padding-bottom: 20px;
@@ -105,7 +107,7 @@ div.form-style h1 {
 div.form-style label {
     float: left;
     padding-top: 27px;
-    color: #4B9BD5;
+    color: #A569F8;
     font-weight: 500;
     font-size: 25px;
     padding-right: 32px;
@@ -118,8 +120,8 @@ div.form-style input {
 }
 
 div.form-style button {
-    border-color: #4B9BD5;
-    color: #4B9BD5;
+    border-color: #A569F8;
+    color: #A569F8;
     padding: 5px 24px;
     font-size: 16px;
     margin-top: 26px;
@@ -236,6 +238,7 @@ div.products-new button {
     margin-top: 26px;
     margin-left: 167px;
 } */
+
 /********************************************************
 Products-Index
 ********************************************************/
@@ -245,11 +248,15 @@ Products-Index
     color: #A569F8;
 }
 
-.products-index h3 {
+/* .products-index h3 {
     margin-bottom: 20px;
+} */
+
+.headers {
+    padding-bottom: 65px
 }
 
-.product-names {
+.product-header {
     float: left;
     text-align: left;
 }
@@ -257,6 +264,28 @@ Products-Index
 .product-names a {
     color: #A569F8;
     text-decoration: underline;
+}
+
+.quantities-header {
+    float: right;
+    text-align: center;
+}
+
+.product-display {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.product-names {
+    /* padding: 20px;
+    margin-left: -40px; */
+    float: left;
+    text-align: left;
 }
 
 .product-quantities {
@@ -279,6 +308,13 @@ Products-Show
 .products-show {
     padding: 38px;
     color: #A569F8;
+}
+
+div.wrapper-2 a {
+    color: #A569F8;
+    padding: 20px;
+    position: relative;
+    top: 16px;
 }
 
 .products-show h3 {
@@ -308,7 +344,7 @@ hr {
     border: 1px solid #9CF486;
 }
 
-#add-btn {
+div.products-show #add-btn {
     margin-top: -3px;
 }
 

@@ -18,7 +18,7 @@ module.exports = app => {
 
     // NEW
     app.get('/products/new', (req, res) => {
-        res.render('products-new');
+        res.render("products-new");
     })
 
     // CREATE
@@ -26,17 +26,18 @@ module.exports = app => {
         // INSTANTIATE INSTANCE OF POST MODEL
         const post = new Product(req.body);
 
-        // SAVE INSTANCE OF POST MODEL TO DB
+        // SAVE INSTANCE OF PRODUCT MODEL TO DB
         post.save((err, post) => {
         // REDIRECT TO THE ROOT
-        return res.redirect(`/`);
+        return res.redirect("/");
         })
     });
 
+    //SHOW
     app.get("/products/:id", function(req, res) {
-        // LOOK UP THE POST
+        // LOOK UP THE PRODUCT
         Product.findById(req.params.id)
-        .then(product => {
+        .then((product) => {
           res.render("products-show", { product });
         })
         .catch(err => {

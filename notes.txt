@@ -1,0 +1,43 @@
+Add to navbar after New Product:
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/charities" >Sign Up</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/donations/new" >Login</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/donations/new" >Logout</a>
+</li>
+
+Add to products-show page (under hr tag):
+<!-- Use Bootstrap Button -->
+<button type="button" action="/products/new" id="add-btn"class="btn btn-outline-primary">+</button>
+<!-- Supply -->
+<div class="lead supply-names">
+    <h3>Supply:</h3>
+    <h4><a href="/products/{{this._id}}">{{this.name}}</a></h4>
+</div>
+<!-- QUANTITY -->
+<div class="supply-quantities">
+    <h3>Quantity</h3>
+    <h4>{{this.quantity}}</h4>
+</div>
+<!-- BUTTON -->
+<div class="form-style">
+    <button type="button" id="edit-btn"class="btn btn-outline-primary">Edit</button>
+</div>
+
+Code from product-index:
+<div class="index-headers">
+    <!-- PRODUCT -->
+    <h3 class="product-names-header">Product:</h3>
+    <!-- QUANTITY -->
+    <h3 class="product-quantities-header">Quantity</h3>
+</div>
+{{#each products}}
+<div class="product-display">
+    <h4 class="product-names"><a href="/products/{{this._id}}">{{this.name}}</a></h4>
+    <h4 class="product-quantities">{{this.quantity}}</h4>
+</div>
+{{/each}}

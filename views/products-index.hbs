@@ -2,21 +2,29 @@
 <div class="products-index">
     <!-- Use Bootstrap Button -->
     <button type="button" action="/products/new" id="add-btn"class="btn btn-outline-primary">+</button>
+    <div class="headers">
+        <!-- PRODUCT -->
+        <h3 class="product-header">Product:</h3>
+        <!-- QUANTITY -->
+        <h3 class="quantities-header">Quantity</h3>
+    </div>
     {{#each products}}
     <!-- PRODUCT -->
-    <div class="lead product-names">
-        <h3>Product:</h3>
+    <div class="product-names">
         <h4><a href="/products/{{this._id}}">{{this.name}}</a></h4>
     </div>
     <!-- QUANTITY -->
     <div class="product-quantities">
-        <h3>Quantity</h3>
         <h4>{{this.quantity}}</h4>
     </div>
+    <br><br><br>
     {{/each}}
+
+
+
     <script type="text/javascript">
         document.getElementById("add-btn").onclick = function () {
-            location.href = "/products.new"
+            location.href = "/products/new"
         }
     </script>
 </div>
