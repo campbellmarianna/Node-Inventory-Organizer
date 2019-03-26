@@ -20,19 +20,6 @@ app.set('view engine', 'hbs')
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.render('home');
-})
-
-app.get('/products', (req, res) => {
-  res.render('products-index');
-})
-
-// NEW
-app.get('/products/new', (req, res) => {
-  res.render('products-new');
-})
-
 // CONTROLLERS
 require('./controllers/products.js')(app);
 

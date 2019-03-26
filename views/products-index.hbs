@@ -1,2 +1,22 @@
 {{> navbar}}
-<h1>Hello</h2>
+<div class="products-index">
+    <!-- Use Bootstrap Button -->
+    <button type="button" action="/products/new" id="add-btn"class="btn btn-outline-primary">+</button>
+    {{#each products}}
+    <!-- PRODUCT -->
+    <div class="product-names">
+        <h3>Product:</h3>
+        <h4><a href="/products/{{this._id}}">{{this.name}}</a></h4>
+    </div>
+    <!-- QUANTITY -->
+    <div class="product-quantities">
+        <h3>Quantity</h3>
+        <h4>{{this.quantity}}</h4>
+    </div>
+    {{/each}}
+    <script type="text/javascript">
+        document.getElementById("add-btn").onclick = function () {
+            location.href = "/products.new"
+        }
+    </script>
+</div>
