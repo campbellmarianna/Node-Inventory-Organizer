@@ -273,3 +273,55 @@ Products-Index
     padding-bottom: 2px;
     margin-left: 238px;
 }
+/********************************************************
+Products-Show
+********************************************************/
+.products-show {
+    padding: 38px;
+    color: #A569F8;
+}
+
+.products-show h3 {
+    margin-bottom: 20px;
+}
+
+.products-show a {
+    color: #A569F8;
+    text-decoration: underline;
+}
+
+.quantity-info h3 {
+    float: left;
+}
+
+.quantity-info h4 {
+    float: right;
+}
+
+div.products-show button {
+    color: #A569F8;
+    border-color: #A569F8;
+    margin-left: 208px;
+}
+
+hr {
+    border: 1px solid #9CF486;
+}
+
+#add-btn {
+    margin-top: -3px;
+}
+
+.supply-names {
+    float: left;
+    text-align: left;
+}
+
+.supply-quantities {
+    float: right;
+    text-align: center;
+}
+
+#edit-btn {
+    margin-top: 29px;
+}

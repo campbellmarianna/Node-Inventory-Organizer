@@ -1,0 +1,26 @@
+{{> navbar}}
+<div class="products-show">
+    <h3>{{product.name}}</h3>
+    <div class="quantity-info">
+        <h3>Quantity</h3>
+        <h4>{{product.quantity}}</h4>
+    </div>
+    <br><br>
+    <hr>
+    <!-- Use Bootstrap Button -->
+    <button type="button" action="/products/new" id="add-btn"class="btn btn-outline-primary">+</button>
+    <!-- Supply -->
+    <div class="lead supply-names">
+        <h3>Supply:</h3>
+        <h4><a href="/products/{{this._id}}">{{this.name}}</a></h4>
+    </div>
+    <!-- QUANTITY -->
+    <div class="supply-quantities">
+        <h3>Quantity</h3>
+        <h4>{{this.quantity}}</h4>
+    </div>
+    <!-- BUTTON -->
+    <div class="form-style">
+        <button type="button" id="edit-btn"class="btn btn-outline-primary">Edit</button>
+    </div>
+</div>
