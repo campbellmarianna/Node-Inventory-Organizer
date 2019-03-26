@@ -32,4 +32,15 @@ module.exports = app => {
         return res.redirect(`/`);
         })
     });
+
+    app.get("/products/:id", function(req, res) {
+        // LOOK UP THE POST
+        Product.findById(req.params.id)
+        .then(product => {
+          res.render("products-show", { product });
+        })
+        .catch(err => {
+          console.log(err.message);
+        });
+        });
 };
