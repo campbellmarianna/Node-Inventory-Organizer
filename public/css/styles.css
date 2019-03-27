@@ -351,13 +351,23 @@ div.products-show #add-btn {
 .supply-names {
     float: left;
     text-align: left;
+    margin-left: -19px;
 }
 
 .supply-quantities {
     float: right;
     text-align: center;
+    margin-right: 40px;
 }
 
 #edit-btn {
     margin-top: 29px;
+}
+
+.add-supply-form button {
+    margin-left: 185px;
+}
+
+div.form-group {
+    padding-left: 0px;
 }

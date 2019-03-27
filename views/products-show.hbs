@@ -10,6 +10,50 @@
     </div>
     <br><br>
     <hr>
+    <!-- Add Supply Form-->
+    <div class="add-supply-form">
+        <h4>Add Supply</h4>
+        <form method="POST" action="/products/{{product._id}}/supplies">
+            <div class="form-group">
+                    <label for="name">Supply:</label><br>
+                    <input class="form-control" id="name" type="text" name="name" value="{{this.name}}" />
+            </div>
+            <div class="form-group">
+                    <label for="quantity">Quantity:</label><br>
+                    <input class="form-control" id="quantity" type="text" name="quantity" value="{{this.quantity}}"/>
+            </div>
+            <div class="form-style">
+                <!-- BUTTON -->
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="headers">
+        <!-- SUPPLY -->
+        <h3 class="product-header">Product:</h3>
+        <!-- QUANTITY -->
+        <h3 class="quantities-header">Quantity</h3>
+    </div>
+    {{#each product.supplies}}
+    <!-- Supply -->
+    <div class="supply-names">
+        <h4><a href="/products/{{this._id}}">{{this.name}}</a></h4>
+    </div>
+    <!-- QUANTITY -->
+    <div class="supply-quantities">
+        <h4>{{this.quantity}}</h4>
+    </div>
+    <br><br><br>
+    {{/each}}
+    <!-- BUTTON -->
+    <div class="form-style">
+        <button type="button" id="edit-btn"class="btn btn-outline-primary">Edit</button>
+    </div>
 
+    <script type="text/javascript">
+        document.getElementById("add-btn").onclick = function () {
+            location.href = "/supplies/new"
+        }
+    </script>
 </div>
 </div>

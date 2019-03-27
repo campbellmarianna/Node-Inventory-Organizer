@@ -22,14 +22,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // CONTROLLERS
 require('./controllers/products.js')(app);
+require('./controllers/supplies.js')(app);
 
 // Set db
 require('./data/inventoryOrg-db');
+
+app.get('/home', (req, res) => {
+  res.render('home');
+})
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log('App listening on port 3000!')
-})
+});
 
 module.exports = app;

@@ -1,8 +1,7 @@
 const Product = require('../models/product');
+const Supply = require('../models/supply');
+
 module.exports = app => {
-    app.get('/home', (req, res) => {
-      res.render('home');
-    })
 
     // INDEX
     app.get('/', (req, res) => {
@@ -19,7 +18,7 @@ module.exports = app => {
     // NEW
     app.get('/products/new', (req, res) => {
         res.render("products-new");
-    })
+    });
 
     // CREATE
     app.post("/products/new", (req, res) => {
@@ -35,13 +34,13 @@ module.exports = app => {
 
     //SHOW
     app.get("/products/:id", function(req, res) {
-        // LOOK UP THE PRODUCT
-        Product.findById(req.params.id)
+        // LOOK UP THE POST
+        Product.findById(req.params.id).populate('supplies')
         .then((product) => {
-          res.render("products-show", { product });
+          res.render('products-show.hbs', { product })
         })
-        .catch(err => {
-          console.log(err.message);
+        .catch((err) => {
+          console.log(err.message)
         });
     });
 };
