@@ -5,7 +5,7 @@ Website: https://node-inventory-organizer-mc.herokuapp.com/
 ### Preview Sample
 | Home View | Index | Show |
 | --- | --- | --- |
-| ![Product Screenshot 1](static/img/io-homepage.png) | ![Product Screenshot 2](static/img/indexView.png) |  ![Product Screenshot 3](static/img/showView.png) |
+| ![Product Screenshot 1](public/img/io-homepage.png) | ![Product Screenshot 2](public/img/indexView.png) |  ![Product Screenshot 3](public/img/showView.png) |
 
 This app is intended to help people keep track of inventory.
 **_Invenotry Organizer_** was created with Node, Express, MongoDB, Handlebars, HTML and CSS.
