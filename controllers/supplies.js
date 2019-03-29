@@ -16,17 +16,18 @@ module.exports = function(app) {
       supply
         .save()
         .then(supply => {
-          return Product.findById(req.params.productId);
+            return Product.findById(req.params.productId);
         })
         .then(product => {
-          product.supplies.unshift(supply);
-          return product.save();
+            product.supplies.unshift(supply);
+            return product.save();
         })
         .then(product => {
-          res.redirect(`/`);
+            // REDIRECT
+            res.redirect(`/products/${req.params.productId}`);
         })
         .catch(err => {
-          console.log(err);
+            console.log(err);
         });
     });
 };

@@ -29,6 +29,5 @@ Index - https://node-inventory-organizer-mc.herokuapp.com/
 Show - https://node-inventory-organizer-mc.herokuapp.com/products/:id
 ```
 
-
 ## Version 1 Release Date:
 [x] Friday March 22, 2019

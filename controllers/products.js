@@ -23,12 +23,12 @@ module.exports = app => {
     // CREATE
     app.post("/products/new", (req, res) => {
         // INSTANTIATE INSTANCE OF POST MODEL
-        const post = new Product(req.body);
+        const product = new Product(req.body);
 
         // SAVE INSTANCE OF PRODUCT MODEL TO DB
-        post.save((err, post) => {
+        product.save((err, product) => {
         // REDIRECT TO THE ROOT
-        return res.redirect("/");
+        return res.redirect(`/products/${product._id}`);
         })
     });
 

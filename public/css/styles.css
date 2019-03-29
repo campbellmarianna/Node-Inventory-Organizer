@@ -337,7 +337,7 @@ div.wrapper-2 a {
 div.products-show button {
     color: #A569F8;
     border-color: #A569F8;
-    margin-left: 208px;
+    margin-left: 205px;
 }
 
 hr {
@@ -364,7 +364,7 @@ div.products-show #add-btn {
     margin-top: 29px;
 }
 
-.add-supply-form button {
+div.form-style.supply button {
     margin-left: 185px;
 }
 
